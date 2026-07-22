@@ -414,3 +414,54 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2026-07-22 14:30:21.879 +05:30 [INF] HTTP GET /api/Students responded 401 in 50.6177 ms
 2026-07-22 14:30:21.885 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Students - 401 0 null 91.9ms
 2026-07-22 14:33:51.595 +05:30 [INF] Application is shutting down...
+2026-07-22 14:34:29.626 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-22 14:34:29.669 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-22 14:34:29.673 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-22 14:34:29.676 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-22 14:34:29.709 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-22 14:34:29.719 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-07-22 14:34:29.730 +05:30 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-22 14:34:29.766 +05:30 [INF] Now listening on: http://localhost:5000
+2026-07-22 14:34:29.768 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-22 14:34:29.769 +05:30 [INF] Hosting environment: Production
+2026-07-22 14:34:29.769 +05:30 [INF] Content root path: C:\Users\ASUS\Downloads\StudentManagementAPI\StudentManagementAPI\StudentManagementAPI
+2026-07-22 14:35:19.903 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Students - null null
+2026-07-22 14:35:19.930 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-07-22 14:35:19.953 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14310: JWE authentication tag is missing.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-07-22 14:35:19.962 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-07-22 14:35:19.966 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-22 14:35:19.969 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-22 14:35:19.971 +05:30 [INF] HTTP GET /api/Students responded 401 in 40.4014 ms
+2026-07-22 14:35:19.975 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Students - 401 0 null 73.7564ms
+2026-07-22 14:35:31.752 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Students - null null
+2026-07-22 14:35:31.758 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14310: JWE authentication tag is missing.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-07-22 14:35:31.760 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-07-22 14:35:31.762 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-22 14:35:31.763 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-22 14:35:31.764 +05:30 [INF] HTTP GET /api/Students responded 401 in 8.3263 ms
+2026-07-22 14:35:31.766 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Students - 401 0 null 13.4069ms
